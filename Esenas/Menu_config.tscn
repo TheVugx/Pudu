@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://brqxh622s1blv"]
+
+[ext_resource type="Script" uid="uid://w7whj4hvj1mc" path="res://Scripts/Control_Menu_config.gd" id="1_yvppr"]
+[ext_resource type="Texture2D" uid="uid://cc8cdtrpni0oi" path="res://Assets/Fondo_Principal.png" id="2_iv5vn"]
+
+[node name="MenuConfig" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yvppr")
+
+[node name="FondoPrincipal" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_iv5vn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 776.0
+offset_right = 587.0
+offset_bottom = 901.0
+theme_override_constants/separation = 80
+
+[node name="Volver" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Volver"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 473.0
+offset_top = 451.0
+offset_right = 1878.0
+offset_bottom = 697.0
+theme_override_font_sizes/font_size = 180
+text = "Configuraciones"
+
+[connection signal="pressed" from="VBoxContainer/Volver" to="." method="_on_volver_pressed"]

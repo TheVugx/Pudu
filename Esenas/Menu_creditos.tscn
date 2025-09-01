@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3563wglpjy2f"]
+
+[ext_resource type="Script" uid="uid://dlpl835lix7gn" path="res://Scripts/Control_Menu_Creditos.gd" id="1_0xgyi"]
+[ext_resource type="Texture2D" uid="uid://cc8cdtrpni0oi" path="res://Assets/Fondo_Principal.png" id="1_v15h7"]
+
+[node name="MenuCreditos" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0xgyi")
+
+[node name="FondoPrincipal" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_v15h7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 776.0
+offset_right = 587.0
+offset_bottom = 901.0
+theme_override_constants/separation = 80
+
+[node name="Volver" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Volver"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 966.0
+offset_top = 459.0
+offset_right = 1692.0
+offset_bottom = 705.0
+theme_override_font_sizes/font_size = 180
+text = "Creditos"
+
+[connection signal="pressed" from="VBoxContainer/Volver" to="." method="_on_volver_pressed"]
