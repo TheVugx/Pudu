@@ -44,8 +44,8 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Salir"
 
-[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="VBoxContainer/Opciones" to="." method="_on_opciones_pressed"]
 [connection signal="pressed" from="VBoxContainer/Creditos" to="." method="_on_creditos_pressed"]
 [connection signal="pressed" from="VBoxContainer/Salir" to="." method="_on_salir_pressed"]

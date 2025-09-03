@@ -1,3 +1,19 @@
-[gd_scene format=3 uid="uid://bnld60qqt21b6"]
+[gd_scene load_steps=3 format=3 uid="uid://cgdu6oc784d7o"]
+
+[ext_resource type="PackedScene" uid="uid://djohmenfmh18l" path="res://Assets/Pudu/Pudu Animaciones.glb" id="1_yppbw"]
+[ext_resource type="Texture2D" uid="uid://ca31hgai1t32u" path="res://Assets/Pudu/Pudu Animaciones_-color.png" id="2_yppbw"]
 
 [node name="Pudu" type="Node2D"]
+
+[node name="SubViewport" type="SubViewport" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SubViewport"]
+
+[node name="Pudu Animaciones" parent="SubViewport/MeshInstance3D" instance=ExtResource("1_yppbw")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_yppbw")
